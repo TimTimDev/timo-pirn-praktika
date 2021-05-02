@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+body {
+    background-color: #AF6EC4;
+    font-size: 20px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.text {
+    text-align: center;
+}
+
+#latitude, #longitude, #date, #btn {
+    border-radius: 10px;
+    border: 2px solid grey;
+    outline: none;
+    height: 2.55rem;
+    background-color: white;
+    font-size: 20px;
+}
+
+#btn {
+    width: 100px;
+    height: 2.7rem;
+}
+
+#btn:hover {
+    background-color: darkgrey;
+    transition: 1s;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mapid {
+    height: 420px;
+    width: 620px;
+    border-radius: 15px;
+}
+
+.inputs, #mapid, #display-time {
+    margin-top: 2rem;
+}
+
+#sunrise, #sunset, #day-length {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid grey;
+    padding: 0.6rem;
+}

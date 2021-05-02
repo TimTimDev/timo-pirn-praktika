@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    
+    <title>Praktika Test</title>
+</head>
+<body>
+    <div class="container">
+        <div class="inputs">
+            <p class="text">Enter coordiantes below or click on the map to get sunrise/sunset data</p>
+            <form action="script.js">
+                <input id="latitude" type="text" name="lat" placeholder="Enter latitude">
+                <input id="longitude" type="text" name="lng" placeholder="Enter longitude">
+                <input id="date" type="date" name="date" placeholder="Enter date">
+                <input id="btn" type="button" value="Submit" onclick="getInputValue()">
+            </form>
+        </div>
+        <div id="mapid"></div>
+        <div id="display-time">
+            <p class="text">Displayed times are in UTC</p>
+            <span id="sunrise">Sunrise: - </span>
+            <span id="sunset">Sunset: - </span>
+            <span id="day-length">Day Lenght: - </span>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
