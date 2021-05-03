@@ -29,6 +29,7 @@ body {
     transition: 1s;
 }
 
+/* container for all elements */
 .container {
     margin: auto;
     width: 100%;
@@ -37,19 +38,32 @@ body {
     align-items: center;
 }
 
+/* Map styling */
 #mapid {
     height: 420px;
     width: 620px;
     border-radius: 15px;
 }
 
+/* Spacing between inputs section, map and displayed times section */
 .inputs, #mapid, #display-time {
     margin-top: 2rem;
 }
 
+/* Styling for displayed time fields */
 #sunrise, #sunset, #day-length {
     background-color: white;
     border-radius: 10px;
     border: 2px solid grey;
     padding: 0.6rem;
+}
+
+/* Attribution field for API website */
+.attribution {
+    text-align: center;
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
 }

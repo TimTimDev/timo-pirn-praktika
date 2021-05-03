@@ -1,5 +1,4 @@
-// #1
-
+// Variables for latitude, longitude and date
 var lat;
 var lng;
 var date = "today";
@@ -11,7 +10,7 @@ function fetchInfo(){
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
             var sunrise = data.results.sunrise;
             var sunset = data.results.sunset;
             var dayLength = data.results.day_length;
@@ -21,16 +20,17 @@ function fetchInfo(){
         });
 }
 
+// Get value from HTML input elements via submit button
 function getInputValue(){
     lat = document.getElementById("latitude").value;
     lng = document.getElementById("longitude").value;
     date = document.getElementById("date").value;
     mymap.panTo(new L.LatLng(lat, lng));
-    console.log(lat, lng, date);
+    // console.log(lat, lng, date);
     fetchInfo();
 }
 
-// #2
+// Variables for displaying sunrise/sunset times
 
 var displayArea = document.getElementById("display-time");
 var sunriseSpan = document.getElementById("sunrise");
@@ -38,7 +38,7 @@ var sunsetSpan = document.getElementById("sunset");
 var dayLengthSpan = document.getElementById("day-length");
 
 
-// #3
+// Display Leaflet map
 
 var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
@@ -52,9 +52,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     crs: L.CRS.EPSG4326,
 }).addTo(mymap);
 
+// Map onclick function which displays coordinates on map and also shows sunrise/sunset times
 var popup = L.popup();
 
-//Map onclick function which displays coordinates on map and also shows sunrise/sunset times
 mymap.on('click', function(e){
     popup
     .setLatLng(e.latlng)
@@ -64,7 +64,7 @@ mymap.on('click', function(e){
     var coord = e.latlng;
     lat = coord.lat;
     lng = coord.lng;
-    console.log("You clicked the map at latitude: " + lat + " and longitude: " + lng);
+    // console.log("You clicked the map at latitude: " + lat + " and longitude: " + lng);
 
     fetchInfo();
     });

@@ -1,10 +1,18 @@
 # timo-pirn-praktika
 
+## Link projektile
+
+Timo Pirn proovitöö Netlify link: <https://timopirn-test.netlify.app/>.
+
+## Kasutusjuhend
+
+Päikesetõusu ja -loojangu aegade kuvamiseks tuleb sisestada info väljadesse vastavad koordinaadid või vajutades hiirega kaardile.
+
 ## Lahenduskäik
 
 * Loon vaated koordinaatide ja kellaaja sisestamiseks kasutades lihtsaid HTML input elemente ja Javascripti, et sisestatud info kätte saada onclick funktsiooni kasutades.
 
-* Input väjadesse sisestatud koordinaadid kuvavad kaardil täpse asukoha ja kaardi all päikesetõusu ja -loojangu aegu
+* Input väjadesse sisestatud koordinaadid kuvavad kaardil täpse asukoha ja kaardi all päikesetõusu ja -loojangu aegu.
 
 * Lisan ala päikesetõusu ja loojangu ning päeva pikkuse kuvamiseks.
 
